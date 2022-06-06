@@ -1,0 +1,54 @@
+﻿.logo {
+    display: flex;
+    width: 350px;
+    height: 200px;
+    padding-left: 35%;
+}
+
+.content {
+    display: flex;
+    align-items: initial;
+}
+
+.background-card {
+    background-color: #FFBF2C;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 35%;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-bottom: 2%;
+    margin-left: 2%;
+}
+
+.card-container {
+}
+
+.card {
+}
+
+.name {
+    background-color: #FFBF2C;
+    font-family: 'Comic Sans MS';
+    font-size: 25px;
+    text-align: center;
+}
+
+.card-image {
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+    .card-image img {
+        margin-left: 25%;
+        width: 55%;
+        height: 55%;
+    }
+
+.card-stats {
+    font-family: 'Comic Sans MS';
+    font-size: 15px;
+    text-align: center;
+}

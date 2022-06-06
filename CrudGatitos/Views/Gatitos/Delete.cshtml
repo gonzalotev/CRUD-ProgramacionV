@@ -1,0 +1,51 @@
+﻿@model CrudGatitos.Models.Gatito
+
+@{
+    ViewData["Title"] = "Eliminar datos del Gatito";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Eliminar datos del Gatito</h3>
+        </div>
+    </div>
+
+    <div class="row">
+       <div class="col-sm-10">
+           <form method="post" asp-action="DeleteGatito">
+               <input type="hidden" asp-for="Id"/>
+
+               <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+               <div class="form-group">
+                   <label asp-for="Nombre" class="control-label"></label>
+                   <input asp-for="Nombre" class="form-control" disabled/>
+                   <span asp-validation-for="Nombre" class="text-danger"></span>
+               </div>
+               <div class="form-group">
+                   <label asp-for="Raza" class="control-label"></label>
+                   <input asp-for="Raza" class="form-control" disabled/>
+                   <span asp-validation-for="Raza" class="text-danger"></span>
+               </div>
+               <div class="form-group">
+                   <label asp-for="Peso" class="control-label"></label>
+                   <input asp-for="Peso" class="form-control" disabled/>
+               </div>
+               <div class="form-group">
+                   <label asp-for="Edad" class="control-label"></label>
+                   <input asp-for="Edad" class="form-control" disabled/>
+               </div>
+               <div class="form-group">
+                   <label asp-for="Colores" class="control-label"></label>
+                   <input asp-for="Colores" class="form-control" disabled/>
+               </div>
+               <div class="form-group">
+                   <input type="submit" value="Eliminar Gatito" class="btn btn-primary" />
+               </div>
+           </form>
+       </div>
+    </div>
+
+</div>
