@@ -5,9 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Create</h1>
-
-
 <div class="container">
 
     <div class="row">
@@ -45,7 +42,8 @@
                    <input asp-for="Colores" class="form-control" />
                </div>
                <div class="form-group">
-                   <input type="submit" value="Editar Gatito" class="btn btn-primary" />
+                   <input type="submit" value="Editar Gatito" class="btn" style="background-color:#F5B041 ;"/>
+                   <a asp-controller="Gatitos" asp-action="Index" class="btn btn-danger">Cancelar</a>
                </div>
            </form>
        </div>

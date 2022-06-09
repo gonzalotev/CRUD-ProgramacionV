@@ -25,8 +25,6 @@ namespace MvcMovie.Models
 
             {
 
-                // Look for any movies.
-
                 if (context.Gatito.Any())
 
                 {
@@ -43,7 +41,8 @@ namespace MvcMovie.Models
                         Raza = "Siames",
                         Peso = 10,
                         Edad = 4,
-                        Colores = "Naranja"
+                        Colores = "Naranja",
+                        Imagen = "https://img.europapress.es/fotoweb/fotonoticia_20141119172350_420.jpg"
                     },
                     new Gatito
                     {
@@ -51,7 +50,8 @@ namespace MvcMovie.Models
                         Raza = "Siberiano",
                         Peso = 11,
                         Edad = 6,
-                        Colores = "Blanco"
+                        Colores = "Blanco",
+                        Imagen = "https://www.purina-latam.com/sites/g/files/auxxlc391/files/styles/social_share_large/public/Que_debes_saber_antes_de_adoptar_un_gatito.jpg?itok=guFplHEU"
                     },
                     new Gatito
                     {
@@ -59,7 +59,8 @@ namespace MvcMovie.Models
                         Raza = "Bengala",
                         Peso = 12,
                         Edad = 2,
-                        Colores = "Negro y Gris"
+                        Colores = "Negro y Gris",
+                        Imagen = "https://www.purina-latam.com/sites/g/files/auxxlc391/files/styles/social_share_large/public/Que_debes_saber_antes_de_adoptar_un_gatito.jpg?itok=guFplHEU"
                     },
                     new Gatito
                     {
@@ -67,7 +68,8 @@ namespace MvcMovie.Models
                         Raza = "Munchkin",
                         Peso = 9,
                         Edad = 6,
-                        Colores = "Negro y Naranja"
+                        Colores = "Negro y Naranja",
+                        Imagen = "https://t1.ea.ltmcdn.com/es/posts/7/4/3/como_ayudar_a_un_gatito_a_defecar_20347_600.jpg"
                     }
                 );
                 context.SaveChanges();

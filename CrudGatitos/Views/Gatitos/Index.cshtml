@@ -6,7 +6,7 @@
     
 }
 
-<div class="container">
+<div class="container" style="padding-left:10%;background-color:#FEF9E7; ">
     @if(TempData["mensaje"] != null){
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
             @TempData["mensaje"]
@@ -17,40 +17,45 @@
     }
 
     <div class="row">
-        <div class="col-sm-6">
-            <h3>Lista de Gatitos</h3>
+        <div class="col-sm-8" style="text-align:center">
+            <h1>Lista de Gatitos</h1>
         </div>
-        <div class="col-sm-6">
-           <a class="btn btn-success d-block" asp-action="Create" asp-controller="Gatitos">Agregar Nuevo Gatito</a>
+        <div class="col-sm-4">
+            <a class="btn  d-block" asp-action="Create" asp-controller="Gatitos" 
+               style="background-color:#FFC65C;font-size:larger">
+               Agregar Nuevo Gatito
+            </a>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" style="">
         @if (Model.Count() > 0) {
-
-           <div class="content">
                 @foreach (var item in Model) {
-                        <div class="background-card">
-                                <div class="card">
-                                     <p class="name">@Html.DisplayFor(modelItem => item.Nombre)</p>
-                                    <div class="card-image">
-                                        <img src="./css/gatito.jpg alt="Gatito"/>
-                                    </div>
-                                </div>
-                                <div class="card-stats">
-                                    <p>Raza: @Html.DisplayFor(modelItem => item.Raza)</p>
-                                    <p>Edad: @Html.DisplayFor(modelItem => item.Edad)</p>
-                                    <p>Peso: @Html.DisplayFor(modelItem => item.Peso)</p>
-                                    <p>Colores: @Html.DisplayFor(modelItem => item.Colores)</p>
+                        <div class="card" style="width: 18rem; margin-bottom:2%; margin-right: 3%;background-color:#F9E79F ">
+                             <div class="col" >   
+                                  @if (item.Imagen != "") 
+                                {                               
+                                     <img src="@item.Imagen" alt="gatito" class="card-img-top" 
+                                     style="max-width: 250px; min-width: 250px; min-height: 300px;max-height: 300px;align-content:center "/>
+                                }
+                                else 
+                                {
+                                  <h2>No hay imagen del gatito</h2>
+                                }
+                                <div class="card-body">
+                                    <p class="card-title">Nombre: @Html.DisplayFor(modelItem => item.Nombre)</p>
+                                    <p class="card-text">Raza: @Html.DisplayFor(modelItem => item.Raza)</p>
+                                    <p class="card-text">Edad: @Html.DisplayFor(modelItem => item.Edad)</p>
+                                    <p class="card-text">Peso: @Html.DisplayFor(modelItem => item.Peso)</p>
+                                    <p class="card-text">Colores: @Html.DisplayFor(modelItem => item.Colores)</p>
                                     <div>
                                         <a asp-controller="Gatitos" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Editar</a>
                                         <a asp-controller="Gatitos" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
                                     </div>
                                 </div>
+                             </div>
                         </div>
                 }
-           </div>
-
         } else{
             <h1>Lo siento no hay Gatitos disponibles</h1>
         }

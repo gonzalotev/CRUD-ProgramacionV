@@ -15,7 +15,7 @@ namespace CrudGatitos.Models
         [StringLength(50, ErrorMessage = "El Nombre tiene un maximo de 50 caracteres")]
         public string Nombre { get; set; }
 
-        [Required(ErrorMessage = "La raza es obligatoria, en caso de no saber ponga callejero")]
+        [Required(ErrorMessage = "La raza es obligatoria")]
         [StringLength(50, ErrorMessage = "La Raza tiene un maximo de 50 caracteres")]
         public string Raza { get; set; }
 
@@ -24,5 +24,7 @@ namespace CrudGatitos.Models
         public int Edad { get; set; }
 
         public string Colores { get; set; }
+
+        public string Imagen { get; set; }
     }
 }
